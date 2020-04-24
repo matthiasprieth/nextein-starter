@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import withPost, { Content } from 'nextein/post'
-import Link from 'nextein/link'
+import Link from 'next/link'
 
 import { name, authors } from '../site';
 
