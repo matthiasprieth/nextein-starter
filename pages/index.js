@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Head from 'next/head'
 import withPosts from 'nextein/posts'
 import { Content } from 'nextein/post'
-import Link from 'next/link'
+import Link from 'nextein/link'
 
 import { name, authors } from '../site';
 
@@ -25,7 +25,7 @@ class Index extends Component {
             return (
               <article key={post.data.url}>
                 <header>
-                  <h2><Link href={post.data.url}><a>{post.data.title}</a></Link></h2>
+                  <h2><Link {...post}><a>{post.data.title}</a></Link></h2>
                   <p>
                   {author && `Written by ${author.name}`}
                   {author && source && ` ${String.fromCharCode(183)} `}

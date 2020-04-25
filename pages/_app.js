@@ -2,11 +2,11 @@ import React from 'react'
 import App from 'next/app'
 
 export default class MyApp extends App {
-  static async getStaticProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, router, ctx }) {
     let pageProps = {}
 
-    if (Component.getStaticProps) {
-      pageProps = await Component.getStaticProps(ctx)
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx)
     }
 
     return { pageProps }
